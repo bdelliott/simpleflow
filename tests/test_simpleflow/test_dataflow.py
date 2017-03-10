@@ -14,7 +14,6 @@ from moto import mock_swf
 import swf.models
 import swf.models.decision
 import swf.models.workflow
-from simpleflow.marker import Marker
 from simpleflow.swf.task import NonPythonicActivityTask
 from simpleflow.utils import json_dumps
 from swf.models.history import builder
@@ -41,9 +40,6 @@ from tests.data import (
     Tetra,
     non_pythonic,
 )
-
-
-# Note: tests checking the Executor.workflow instance must patch `decref_workflow`.
 
 
 def check_task_scheduled_decision(decision, task):
